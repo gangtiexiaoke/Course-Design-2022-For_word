@@ -7,24 +7,23 @@
 void About(void) {
 	cleardevice();
 	solidrectangle(500, 0, 640, 480);
-	settextstyle(30,0, "×¨Òµ×ÖÌåÉè¼Æ·þÎñ/WWW.ZTSGC.COM/");
-	outtextxy(60, 120, "For WordÊÇÒ»¿î°ïÖúÄã¼ÇÒäµ¥´ÊµÄÈí");
-	outtextxy(30, 160, "¼þ,Ê¹ÓÃC+EasyX¿ª·¢,°üº¬CET.4¼°CET.6µÄ");
-	outtextxy(30, 200, "´Ê¿â,¸ÃÈí¼þÄ¿Ç°ÒÀÈ»ÔÚ¿ª·¢ÖÐ,Î´À´½«»á");
-	outtextxy(30, 240, "¼ÓÈë¸ü¶à¹¦ÄÜºÍ´Ê¿â¡£(¿ÉÄÜ)");
-	outtextxy(60, 280, " ¸ÐÐ»ÄãµÄÊÔÓÃ£¬Ê¹ÓÃÊ±Èç·¢ÏÖÎÊÌâ»ò");
-	outtextxy(30, 320, "ÓÐ½¨ÒéÇëÁªÏµQQ£º2420233491¡£");
-	settextstyle(50, 0, _T("×¨Òµ×ÖÌåÉè¼Æ·þÎñ/WWW.ZTSGC.COM/"));
+	settextstyle(30,0, "ä¸“ä¸šå­—ä½“è®¾è®¡æœåŠ¡/WWW.ZTSGC.COM/");
+	outtextxy(60, 120, "For Wordæ˜¯ä¸€æ¬¾å¸®åŠ©ä½ è®°å¿†å•è¯çš„è½¯");
+	outtextxy(30, 160, "ä»¶,ä½¿ç”¨C+EasyXå¼€å‘,åŒ…å«CET.4åŠCET.6çš„");
+	outtextxy(30, 200, "è¯åº“,è¯¥è½¯ä»¶ç›®å‰ä¾ç„¶åœ¨å¼€å‘ä¸­,æœªæ¥å°†ä¼š");
+	outtextxy(30, 240, "åŠ å…¥æ›´å¤šåŠŸèƒ½å’Œè¯åº“ã€‚(å¯èƒ½)");
+	outtextxy(60, 280, " æ„Ÿè°¢ä½ çš„è¯•ç”¨ï¼Œä½¿ç”¨æ—¶å¦‚å‘çŽ°é—®é¢˜æˆ–");
+	outtextxy(30, 320, "æœ‰å»ºè®®è¯·è”ç³»QQï¼š3269334759ã€‚");
 	outtextxy(80, 40, "About The Software");
 	settextstyle(40,0,"Astron Boy Wonder");
 	outtextxy(200, 400, " by smile_zyk");
-	common(548, 420, 25, "·µ»Ø", 120, 120, 120);
+	common(548, 420, 25, "è¿”å›ž", 120, 120, 120);
 	MOUSEMSG n;
 	while (1) {
 		n = GetMouseMsg();
 		if (n.x >= 520 && n.x <= 615 && n.y >= 420 && n.y <= 445)
 		{
-			contact(548, 420, 25, "·µ»Ø", 60, 60, 60,150,205,205);
+			contact(548, 420, 25, "è¿”å›ž", 60, 60, 60,150,205,205);
 			if (n.uMsg == WM_LBUTTONUP) {
 				menu(1);
 				break;
@@ -32,7 +31,7 @@ void About(void) {
 		}
 		else
 		{
-			depart(548, 420, 25, "·µ»Ø", 120, 120, 120,150,205,205);
+			depart(548, 420, 25, "è¿”å›ž", 120, 120, 120,150,205,205);
 			setlinecolor(RGB(150, 205, 205));
 			line(505, 433, 520, 433);
 			line(615, 433, 630, 433);
@@ -48,7 +47,7 @@ void Recite(void)
 	settextstyle(50, 0, _T("A Scratch"));
 	settextcolor(RGB(150, 150, 150));
 	outtextxy(60, 30, "JUST DO IT");
-	common(548, 420, 25, "·µ»Ø", 120, 120, 120);
+	common(548, 420, 25, "è¿”å›ž", 120, 120, 120);
 	common(90, 130, 40, "CET.4", 190, 190, 190);
 	common(90, 200, 40, "CET.6", 190, 190, 190);
 	MOUSEMSG q;
@@ -58,19 +57,19 @@ void Recite(void)
 		{
 			contact(90, 130, 40, "CET.4", 100, 100, 100, 255, 255, 255);
 			if (q.uMsg == WM_LBUTTONUP) {
-			    Interface("ËÄ¼¶.txt","µ¥´Ê×´Ì¬4.txt");
+			    Interface("å››çº§.txt","å•è¯çŠ¶æ€4.txt");
 			}
 		}
 		else if ((q.x >= 60 && q.x <= 220) && (q.y >= 200 && q.y <= 240))
 		{
 			contact(90, 200, 40, "CET.6", 100, 100, 100, 255, 255, 255);
 			if (q.uMsg == WM_LBUTTONUP) {
-				Interface("Áù¼¶.txt","µ¥´Ê×´Ì¬6.txt");
+				Interface("å…­çº§.txt","å•è¯çŠ¶æ€6.txt");
 			}
 		}
 		else if (q.x >= 520 && q.x <= 615 && q.y >= 420 && q.y <= 445)
 		{
-			contact(548, 420, 25, "·µ»Ø", 60, 60, 60, 150, 205, 205);
+			contact(548, 420, 25, "è¿”å›ž", 60, 60, 60, 150, 205, 205);
 			if (q.uMsg == WM_LBUTTONUP) {
 				menu(0);
 				break;
@@ -81,10 +80,10 @@ void Recite(void)
 			settextstyle(50, 0, _T("A Scratch"));
 			settextcolor(RGB(150, 150, 150));
 			outtextxy(60, 30, "JUST DO IT");
-			settextstyle(40, 0, "ÕÅº£É½²ÝÄàÂíÌå");
+			settextstyle(40, 0, "å¼ æµ·å±±è‰æ³¥é©¬ä½“");
 			depart(90, 130, 40, "CET.4", 190, 190, 190, 255, 255, 255);
 			depart(90, 200, 40, "CET.6", 190, 190, 190, 255, 255, 255);
-			depart(548, 420, 25, "·µ»Ø", 120, 120, 120, 150, 205, 205);
+			depart(548, 420, 25, "è¿”å›ž", 120, 120, 120, 150, 205, 205);
 		}
 	}
 }
@@ -97,17 +96,17 @@ void Review(void)
 	settextstyle(60, 0, _T("A Scratch"));
 	settextcolor(RGB(150, 150, 150));
 	outtextxy(100, 30, "REVIEW");
-	common(548, 420, 25, "·µ»Ø", 120, 120, 120);
-	common(60, 380, 25, "ÖØÖÃËÄ¼¶µ¥´Ê×´Ì¬", 190, 190, 190);
-	common(60, 420, 25, "ÖØÖÃÁù¼¶µ¥´Ê×´Ì¬", 190, 190, 190);
-	common(90, 130, 40, "¸´Ï°", 190, 190, 190);
-	common(90, 200, 40, "Ä¬Ð´", 190, 190, 190);
+	common(548, 420, 25, "è¿”å›ž", 120, 120, 120);
+	common(60, 380, 25, "é‡ç½®å››çº§å•è¯çŠ¶æ€", 190, 190, 190);
+	common(60, 420, 25, "é‡ç½®å…­çº§å•è¯çŠ¶æ€", 190, 190, 190);
+	common(90, 130, 40, "å¤ä¹ ", 190, 190, 190);
+	common(90, 200, 40, "é»˜å†™", 190, 190, 190);
 	MOUSEMSG g;
 	while (1) {
 		g = GetMouseMsg();
 		if ((g.x >= 60 && g.x <= 220) && (g.y >= 130 && g.y <= 170))
 		{
-			contact(90, 130, 40, "¸´Ï°", 100, 100, 100, 255, 255, 255);
+			contact(90, 130, 40, "å¤ä¹ ", 100, 100, 100, 255, 255, 255);
 			if (g.uMsg == WM_LBUTTONUP) {
 				cleardevice();
 				setfillcolor(RGB(150, 205, 205));
@@ -115,7 +114,7 @@ void Review(void)
 				settextstyle(60, 0, _T("A Scratch"));
 				settextcolor(RGB(150, 150, 150));
 				outtextxy(120, 30, "Go Over");
-				common(548, 420, 25, "·µ»Ø", 120, 120, 120);
+				common(548, 420, 25, "è¿”å›ž", 120, 120, 120);
 				common(90, 130, 40, "CET.4", 190, 190, 190);
 				common(90, 200, 40, "CET.6", 190, 190, 190);
 				MOUSEMSG q;
@@ -125,19 +124,19 @@ void Review(void)
 					{
 						contact(90, 130, 40, "CET.4", 100, 100, 100, 255, 255, 255);
 						if (q.uMsg == WM_LBUTTONUP) {
-							Rinterface("ËÄ¼¶.txt", "µ¥´Ê×´Ì¬4.txt");
+							Rinterface("å››çº§.txt", "å•è¯çŠ¶æ€4.txt");
 						}
 					}
 					else if ((q.x >= 60 && q.x <= 220) && (q.y >= 200 && q.y <= 240))
 					{
 						contact(90, 200, 40, "CET.6", 100, 100, 100, 255, 255, 255);
 						if (q.uMsg == WM_LBUTTONUP) {
-							Rinterface("Áù¼¶.txt", "µ¥´Ê×´Ì¬6.txt");
+							Rinterface("å…­çº§.txt", "å•è¯çŠ¶æ€6.txt");
 						}
 					}
 					else if (q.x >= 520 && q.x <= 615 && q.y >= 420 && q.y <= 445)
 					{
-						contact(548, 420, 25, "·µ»Ø", 60, 60, 60, 150, 205, 205);
+						contact(548, 420, 25, "è¿”å›ž", 60, 60, 60, 150, 205, 205);
 						if (q.uMsg == WM_LBUTTONUP) {
 							cleardevice();
 							setfillcolor(RGB(150, 205, 205));
@@ -145,11 +144,11 @@ void Review(void)
 							settextstyle(60, 0, _T("A Scratch"));
 							settextcolor(RGB(150, 150, 150));
 							outtextxy(100, 30, "REVIEW");
-							common(548, 420, 25, "·µ»Ø", 120, 120, 120);
-							common(90, 130, 40, "¸´Ï°", 190, 190, 190);
-							common(90, 200, 40, "Ä¬Ð´", 190, 190, 190);
-							common(60, 380, 25, "ÖØÖÃËÄ¼¶µ¥´Ê×´Ì¬", 190, 190, 190);
-							common(60, 420, 25, "ÖØÖÃÁù¼¶µ¥´Ê×´Ì¬", 190, 190, 190);
+							common(548, 420, 25, "è¿”å›ž", 120, 120, 120);
+							common(90, 130, 40, "å¤ä¹ ", 190, 190, 190);
+							common(90, 200, 40, "é»˜å†™", 190, 190, 190);
+							common(60, 380, 25, "é‡ç½®å››çº§å•è¯çŠ¶æ€", 190, 190, 190);
+							common(60, 420, 25, "é‡ç½®å…­çº§å•è¯çŠ¶æ€", 190, 190, 190);
 							break;
 						}
 					}
@@ -158,17 +157,17 @@ void Review(void)
 						settextstyle(60, 0, _T("A Scratch"));
 						settextcolor(RGB(150, 150, 150));
 						outtextxy(120, 30, "Go Over");
-						settextstyle(40, 0, "ÕÅº£É½²ÝÄàÂíÌå");
+						settextstyle(40, 0, "å¼ æµ·å±±è‰æ³¥é©¬ä½“");
 						depart(90, 130, 40, "CET.4", 190, 190, 190, 255, 255, 255);
 						depart(90, 200, 40, "CET.6", 190, 190, 190, 255, 255, 255);
-						depart(548, 420, 25, "·µ»Ø", 120, 120, 120, 150, 205, 205);
+						depart(548, 420, 25, "è¿”å›ž", 120, 120, 120, 150, 205, 205);
 					}
 				}
 			}
 		}
 		else if ((g.x >= 60 && g.x <= 220) && (g.y >= 200 && g.y <= 240))
 		{
-			contact(90, 200, 40, "Ä¬Ð´", 100, 100, 100, 255, 255, 255);
+			contact(90, 200, 40, "é»˜å†™", 100, 100, 100, 255, 255, 255);
 			if (g.uMsg == WM_LBUTTONUP) {
 				cleardevice();
 				setfillcolor(RGB(150, 205, 205));
@@ -176,7 +175,7 @@ void Review(void)
 				settextstyle(60, 0, _T("A Scratch"));
 				settextcolor(RGB(150, 150, 150));
 				outtextxy(120, 30, "Dictation");
-				common(548, 420, 25, "·µ»Ø", 120, 120, 120);
+				common(548, 420, 25, "è¿”å›ž", 120, 120, 120);
 				common(90, 130, 40, "CET.4", 190, 190, 190);
 				common(90, 200, 40, "CET.6", 190, 190, 190);
 				MOUSEMSG q;
@@ -186,19 +185,19 @@ void Review(void)
 					{
 						contact(90, 130, 40, "CET.4", 100, 100, 100, 255, 255, 255);
 						if (q.uMsg == WM_LBUTTONUP) {
-							dictation("ËÄ¼¶.txt", "µ¥´Ê×´Ì¬4.txt");
+							dictation("å››çº§.txt", "å•è¯çŠ¶æ€4.txt");
 						}
 					}
 					else if ((q.x >= 60 && q.x <= 220) && (q.y >= 200 && q.y <= 240))
 					{
 						contact(90, 200, 40, "CET.6", 100, 100, 100, 255, 255, 255);
 						if (q.uMsg == WM_LBUTTONUP) {
-							dictation("Áù¼¶.txt", "µ¥´Ê×´Ì¬6.txt");
+							dictation("å…­çº§.txt", "å•è¯çŠ¶æ€6.txt");
 						}
 					}
 					else if (q.x >= 520 && q.x <= 615 && q.y >= 420 && q.y <= 445)
 					{
-						contact(548, 420, 25, "·µ»Ø", 60, 60, 60, 150, 205, 205);
+						contact(548, 420, 25, "è¿”å›ž", 60, 60, 60, 150, 205, 205);
 						if (q.uMsg == WM_LBUTTONUP) {
 							cleardevice();
 							setfillcolor(RGB(150, 205, 205));
@@ -206,11 +205,11 @@ void Review(void)
 							settextstyle(60, 0, _T("A Scratch"));
 							settextcolor(RGB(150, 150, 150));
 							outtextxy(100, 30, "REVIEW");
-							common(548, 420, 25, "·µ»Ø", 120, 120, 120);
-							common(90, 130, 40, "¸´Ï°", 190, 190, 190);
-							common(90, 200, 40, "Ä¬Ð´", 190, 190, 190);
-							common(60, 380, 25, "ÖØÖÃËÄ¼¶µ¥´Ê×´Ì¬", 190, 190, 190);
-							common(60, 420, 25, "ÖØÖÃÁù¼¶µ¥´Ê×´Ì¬", 190, 190, 190);
+							common(548, 420, 25, "è¿”å›ž", 120, 120, 120);
+							common(90, 130, 40, "å¤ä¹ ", 190, 190, 190);
+							common(90, 200, 40, "é»˜å†™", 190, 190, 190);
+							common(60, 380, 25, "é‡ç½®å››çº§å•è¯çŠ¶æ€", 190, 190, 190);
+							common(60, 420, 25, "é‡ç½®å…­çº§å•è¯çŠ¶æ€", 190, 190, 190);
 							break;
 						}
 					}
@@ -219,33 +218,33 @@ void Review(void)
 						settextstyle(60, 0, _T("A Scratch"));
 						settextcolor(RGB(150, 150, 150));
 						outtextxy(120, 30, "Dictation");
-						settextstyle(40, 0, "ÕÅº£É½²ÝÄàÂíÌå");
+						settextstyle(40, 0, "å¼ æµ·å±±è‰æ³¥é©¬ä½“");
 						depart(90, 130, 40, "CET.4", 190, 190, 190, 255, 255, 255);
 						depart(90, 200, 40, "CET.6", 190, 190, 190, 255, 255, 255);
-						depart(548, 420, 25, "·µ»Ø", 120, 120, 120, 150, 205, 205);
+						depart(548, 420, 25, "è¿”å›ž", 120, 120, 120, 150, 205, 205);
 					}
 				}
 			}
 		}
 		else if ((g.x >= 40 && g.x <= 280) && (g.y >= 380 && g.y <= 405))
 		{
-			contact(60, 380, 25, "ÖØÖÃËÄ¼¶µ¥´Ê×´Ì¬", 100, 100, 100, 255, 255, 255);
+			contact(60, 380, 25, "é‡ç½®å››çº§å•è¯çŠ¶æ€", 100, 100, 100, 255, 255, 255);
 			if (g.uMsg == WM_LBUTTONUP) {
-				Reset("µ¥´Ê×´Ì¬4.txt");
+				Reset("å•è¯çŠ¶æ€4.txt");
 				Cback();
 			}
 		}
 		else if ((g.x >= 40 && g.x <= 280) && (g.y >= 420 && g.y <= 445))
 		{
-			contact(60, 420, 25, "ÖØÖÃÁù¼¶µ¥´Ê×´Ì¬", 100, 100, 100, 255, 255, 255);
+			contact(60, 420, 25, "é‡ç½®å…­çº§å•è¯çŠ¶æ€", 100, 100, 100, 255, 255, 255);
 			if (g.uMsg == WM_LBUTTONUP) {
-				Reset("µ¥´Ê×´Ì¬6.txt");
+				Reset("å•è¯çŠ¶æ€6.txt");
 				Cback();
 			}
 		}
 		else if (g.x >= 520 && g.x <= 615 && g.y >= 420 && g.y <= 445)
 		{
-			contact(548, 420, 25, "·µ»Ø", 60, 60, 60, 150, 205, 205);
+			contact(548, 420, 25, "è¿”å›ž", 60, 60, 60, 150, 205, 205);
 			if (g.uMsg == WM_LBUTTONUP) {
 				menu(0);
 				break;
@@ -256,12 +255,12 @@ void Review(void)
 			settextstyle(60, 0, _T("A Scratch"));
 			settextcolor(RGB(150, 150, 150));
 			outtextxy(100, 30, "REVIEW");
-			settextstyle(40, 0, "ÕÅº£É½²ÝÄàÂíÌå");
-			depart(90, 130, 40, "¸´Ï°", 190, 190, 190, 255, 255, 255);
-			depart(90, 200, 40, "Ä¬Ð´", 190, 190, 190, 255, 255, 255);
-			depart(60, 380, 25, "ÖØÖÃËÄ¼¶µ¥´Ê×´Ì¬", 190, 190, 190,255,255,255);
-			depart(60, 420, 25, "ÖØÖÃÁù¼¶µ¥´Ê×´Ì¬", 190, 190, 190,255,255,255);
-			depart(548, 420, 25, "·µ»Ø", 120, 120, 120, 150, 205, 205);
+			settextstyle(40, 0, "å¼ æµ·å±±è‰æ³¥é©¬ä½“");
+			depart(90, 130, 40, "å¤ä¹ ", 190, 190, 190, 255, 255, 255);
+			depart(90, 200, 40, "é»˜å†™", 190, 190, 190, 255, 255, 255);
+			depart(60, 380, 25, "é‡ç½®å››çº§å•è¯çŠ¶æ€", 190, 190, 190,255,255,255);
+			depart(60, 420, 25, "é‡ç½®å…­çº§å•è¯çŠ¶æ€", 190, 190, 190,255,255,255);
+			depart(548, 420, 25, "è¿”å›ž", 120, 120, 120, 150, 205, 205);
 		}
 	}
 }
@@ -277,7 +276,7 @@ void WordList(void)
 	char c[26];
 	int width = 0;
 	NWord L = (NWord)malloc(sizeof(struct sqlist));
-	CreateWordList("ËÄ¼¶.txt", "µ¥´Ê×´Ì¬4.txt", L);
+	CreateWordList("å››çº§.txt", "å•è¯çŠ¶æ€4.txt", L);
 	cleardevice();
 	bool a[8] = { 0 };
 	setfillcolor(RGB(150, 205, 205));
@@ -295,10 +294,10 @@ void WordList(void)
 	solidrectangle(80, 10, 349, 50);
 	setfillcolor(RGB(142, 229, 238));
 	solidrectangle(350, 10, 420, 50);
-	settextstyle(20, 0, _T("×¨Òµ×ÖÌåÉè¼Æ·þÎñ/WWW.ZTSGC.COM/"));
+	settextstyle(20, 0, _T("ä¸“ä¸šå­—ä½“è®¾è®¡æœåŠ¡/WWW.ZTSGC.COM/"));
 	settextcolor(RGB(120, 120, 120));
 	outtextxy(360, 20, "search");
-	settextstyle(30, 0, _T("×¨Òµ×ÖÌåÉè¼Æ·þÎñ/WWW.ZTSGC.COM/"));
+	settextstyle(30, 0, _T("ä¸“ä¸šå­—ä½“è®¾è®¡æœåŠ¡/WWW.ZTSGC.COM/"));
 	outtextxy(40, 65 + (i % 8) * 45, PlaceForWord(i + 1, L)->english);
 	outtextxy(40, 65 + ((i + 1) % 8) * 45, PlaceForWord(i + 2, L)->english);
 	outtextxy(40, 65 + ((i + 2) % 8) * 45, PlaceForWord(i + 3, L)->english);
@@ -310,99 +309,99 @@ void WordList(void)
 	if (!rankflag) {
 		if (i + 1 <= 4615)
 		{
-			common(400, 70 + (i % 8) * 45, 25, "ÏêÇé", 120, 120, 120);
+			common(400, 70 + (i % 8) * 45, 25, "è¯¦æƒ…", 120, 120, 120);
 			a[0] = 0;
 		}
 		else a[0] = 1;
 		if (i + 2 <= 4615)
 		{
-			common(400, 70 + ((i + 1) % 8) * 45, 25, "ÏêÇé", 120, 120, 120);
+			common(400, 70 + ((i + 1) % 8) * 45, 25, "è¯¦æƒ…", 120, 120, 120);
 			a[1] = 0;
 		}
 		else a[1] = 1;
 		if (i + 3 <= 4615)
 		{
-			common(400, 70 + ((i + 2) % 8) * 45, 25, "ÏêÇé", 120, 120, 120);
+			common(400, 70 + ((i + 2) % 8) * 45, 25, "è¯¦æƒ…", 120, 120, 120);
 			a[2] = 0;
 		}
 		else a[2] = 1;
 		if (i + 4 <= 4615)
 		{
-			common(400, 70 + ((i + 3) % 8) * 45, 25, "ÏêÇé", 120, 120, 120);
+			common(400, 70 + ((i + 3) % 8) * 45, 25, "è¯¦æƒ…", 120, 120, 120);
 			a[3] = 0;
 		}
 		else a[3] = 1;
 		if (i + 5 <= 4615)
 		{
-			common(400, 70 + ((i + 4) % 8) * 45, 25, "ÏêÇé", 120, 120, 120);
+			common(400, 70 + ((i + 4) % 8) * 45, 25, "è¯¦æƒ…", 120, 120, 120);
 			a[4] = 0;
 		}
 		else a[4] = 1;
 		if (i + 6 <= 4615) {
-			common(400, 70 + ((i + 5) % 8) * 45, 25, "ÏêÇé", 120, 120, 120);
+			common(400, 70 + ((i + 5) % 8) * 45, 25, "è¯¦æƒ…", 120, 120, 120);
 			a[5] = 0;
 		}
 		else a[5] = 1;
 		if (i + 7 <= 4615) {
-			common(400, 70 + ((i + 6) % 8) * 45, 25, "ÏêÇé", 120, 120, 120);
+			common(400, 70 + ((i + 6) % 8) * 45, 25, "è¯¦æƒ…", 120, 120, 120);
 			a[6] = 0;
 		}
 		else a[6] = 1;
 		if (i + 8 <= 4615) {
-			common(400, 70 + ((i + 7) % 8) * 45, 25, "ÏêÇé", 120, 120, 120);
+			common(400, 70 + ((i + 7) % 8) * 45, 25, "è¯¦æƒ…", 120, 120, 120);
 			a[7] = 0;
 		}
 		else a[7] = 1;
 	}
 	else {
 		if (i + 1 <= 2089) {
-			common(400, 70 + (i % 8) * 45, 25, "ÏêÇé", 120, 120, 120);
+			common(400, 70 + (i % 8) * 45, 25, "è¯¦æƒ…", 120, 120, 120);
 			a[0] = 0;
 		}
 		else a[0] = 1;
 		if (i + 2 <= 2089) {
-			common(400, 70 + ((i + 1) % 8) * 45, 25, "ÏêÇé", 120, 120, 120);
+			common(400, 70 + ((i + 1) % 8) * 45, 25, "è¯¦æƒ…", 120, 120, 120);
 			a[1] = 0;
 		}
 		else a[1] = 1;
 		if (i + 3 <= 2089) {
-			common(400, 70 + ((i + 2) % 8) * 45, 25, "ÏêÇé", 120, 120, 120);
+			common(400, 70 + ((i + 2) % 8) * 45, 25, "è¯¦æƒ…", 120, 120, 120);
 			a[2] = 0;
 		}
 		else a[2] = 1;
 		if (i + 4 <= 2089) {
-			common(400, 70 + ((i + 3) % 8) * 45, 25, "ÏêÇé", 120, 120, 120);
+			common(400, 70 + ((i + 3) % 8) * 45, 25, "è¯¦æƒ…", 120, 120, 120);
 			a[3] = 0;
 		}
 		else a[3] = 1;
 		if (i + 5 <= 2089) {
-			common(400, 70 + ((i + 4) % 8) * 45, 25, "ÏêÇé", 120, 120, 120);
+			common(400, 70 + ((i + 4) % 8) * 45, 25, "è¯¦æƒ…", 120, 120, 120);
 			a[4] = 0;
 		}
 		else a[4] = 1;
 		if (i + 6 <= 2089) {
-			common(400, 70 + ((i + 5) % 8) * 45, 25, "ÏêÇé", 120, 120, 120);
+			common(400, 70 + ((i + 5) % 8) * 45, 25, "è¯¦æƒ…", 120, 120, 120);
 			a[5] = 0;
 		}
 		else a[5] = 1;
 		if (i + 7 <= 2089) {
-			common(400, 70 + ((i + 6) % 8) * 45, 25, "ÏêÇé", 120, 120, 120);
+			common(400, 70 + ((i + 6) % 8) * 45, 25, "è¯¦æƒ…", 120, 120, 120);
 			a[6] = 0;
 		}
 		else a[6] = 1;
 		if (i + 8 <= 2089) {
-			common(400, 70 + ((i + 7) % 8) * 45, 25, "ÏêÇé", 120, 120, 120);
+			common(400, 70 + ((i + 7) % 8) * 45, 25, "è¯¦æƒ…", 120, 120, 120);
 			a[7] = 0;
 		}
 		else a[7] = 1;
 	}
-	common(548, 420, 25, "·µ»Ø", 120, 120, 120);
-	common(548, 300, 25, "Ìø×ª", 120, 120, 120);
-	depart(50, 440, 25, "ÉÏÒ»Ò³", 190, 190, 190, 255, 255, 255);
-	depart(370, 440, 25, "ÏÂÒ»Ò³", 190, 190, 190, 255, 255, 255);
-	settextstyle(25, 0, _T("×¨Òµ×ÖÌåÉè¼Æ·þÎñ/WWW.ZTSGC.COM/"));
+	common(548, 420, 25, "è¿”å›ž", 120, 120, 120);
+	common(548, 300, 25, "è·³è½¬", 120, 120, 120);
+	depart(50, 440, 25, "ä¸Šä¸€é¡µ", 190, 190, 190, 255, 255, 255);
+	depart(370, 440, 25, "ä¸‹ä¸€é¡µ", 190, 190, 190, 255, 255, 255);
+	settextstyle(25, 0, _T("ä¸“ä¸šå­—ä½“è®¾è®¡æœåŠ¡/WWW.ZTSGC.COM/"));
 	settextcolor(RGB(60, 60, 60));
-	outtextxy(195, 440, "µÚ         Ò³");
+	outtextxy(195, 440, "ç¬¬         é¡µ");
 	outtextxy(230, 440, (i / 8 + 1) / 100 % 10 + '0');
 	outtextxy(240, 440, (i / 8 + 1) / 10 % 10 + '0');
 	outtextxy(250, 440, (i / 8 + 1) % 10 + '0');
@@ -419,7 +418,7 @@ void WordList(void)
 		if (searchflag) {	
 			if ( s<= 25) 
 			{
-				settextstyle(20, 0, "×¨Òµ×ÖÌåÉè¼Æ·þÎñ/WWW.ZTSGC.COM/");
+				settextstyle(20, 0, "ä¸“ä¸šå­—ä½“è®¾è®¡æœåŠ¡/WWW.ZTSGC.COM/");
 				settextcolor(RGB(100, 100, 100));
 				outtextxy(90 + width, 20, '_');
 			}
@@ -429,7 +428,7 @@ void WordList(void)
 				if ((s >= 25 && c[s] != 8)||110+width>=349&& c[s] != 8)
 					break;
 				if (c[s] >= 'a'&&c[s] <= 'z' || c[s] >= 'A'&&c[s] <= 'Z') {
-					settextstyle(20, 0, "×¨Òµ×ÖÌåÉè¼Æ·þÎñ/WWW.ZTSGC.COM/");
+					settextstyle(20, 0, "ä¸“ä¸šå­—ä½“è®¾è®¡æœåŠ¡/WWW.ZTSGC.COM/");
 					settextcolor(WHITE);
 					outtextxy(90 + width, 20, '_');
 					settextcolor(RGB(100, 100, 100));
@@ -440,7 +439,7 @@ void WordList(void)
 				else if (c[s] == 8) {
 					if (s == 0)
 						break;
-					settextstyle(20, 0, "×¨Òµ×ÖÌåÉè¼Æ·þÎñ/WWW.ZTSGC.COM/");
+					settextstyle(20, 0, "ä¸“ä¸šå­—ä½“è®¾è®¡æœåŠ¡/WWW.ZTSGC.COM/");
 					settextcolor(WHITE);
 					outtextxy(90 + width, 20, '_');
 					s--;
@@ -457,7 +456,7 @@ void WordList(void)
 					BeginBatchDraw();
 					cleardevice();
 					Winterface(i, L);
-					settextstyle(20, 0, "×¨Òµ×ÖÌåÉè¼Æ·þÎñ/WWW.ZTSGC.COM/");
+					settextstyle(20, 0, "ä¸“ä¸šå­—ä½“è®¾è®¡æœåŠ¡/WWW.ZTSGC.COM/");
 					outtextxy(90, 20, c);
 					EndBatchDraw();
 				}
@@ -468,7 +467,7 @@ void WordList(void)
 			g = GetMouseMsg();
 			if (g.x >= 530 && g.x <= 620 && g.y >= 420 && g.y <= 445)
 			{
-				contact(548, 420, 25, "·µ»Ø", 60, 60, 60, 150, 205, 205);
+				contact(548, 420, 25, "è¿”å›ž", 60, 60, 60, 150, 205, 205);
 				if (g.uMsg == WM_LBUTTONUP)
 				{
 					menu(0);
@@ -477,30 +476,30 @@ void WordList(void)
 			}
 			else if (g.x >= 530 && g.x <= 620 && g.y >= 300 && g.y <= 325)
 			{
-				contact(548, 300, 25, "Ìø×ª", 60, 60, 60, 150, 205, 205);
+				contact(548, 300, 25, "è·³è½¬", 60, 60, 60, 150, 205, 205);
 				if (g.uMsg == WM_LBUTTONUP)
 				{
 					int temp = i;
 					char k[5];
-					if (InputBox(k, 4, "ÇëÊäÈëÌø×ªÒ³Âë", "Ìø×ª", NULL, 300, 100, false))
+					if (InputBox(k, 4, "è¯·è¾“å…¥è·³è½¬é¡µç ", "è·³è½¬", NULL, 300, 100, false))
 					{
 						searchflag = 0;
 						int r;
 						sscanf_s(k, "%d", &r);
-						settextstyle(30, 0, _T("×¨Òµ×ÖÌåÉè¼Æ·þÎñ/WWW.ZTSGC.COM/"));
+						settextstyle(30, 0, _T("ä¸“ä¸šå­—ä½“è®¾è®¡æœåŠ¡/WWW.ZTSGC.COM/"));
 						settextcolor(WHITE);
 						outtextxy(40, 65 + (i % 8) * 45, PlaceForWord(i + 1, L)->english);
 						outtextxy(40, 65 + ((i + 2) % 8) * 45, PlaceForWord(i + 3, L)->english);
 						outtextxy(40, 65 + ((i + 4) % 8) * 45, PlaceForWord(i + 5, L)->english);
 						outtextxy(40, 65 + ((i + 6) % 8) * 45, PlaceForWord(i + 7, L)->english);
-						settextstyle(25, 0, _T("×¨Òµ×ÖÌåÉè¼Æ·þÎñ/WWW.ZTSGC.COM/"));
+						settextstyle(25, 0, _T("ä¸“ä¸šå­—ä½“è®¾è®¡æœåŠ¡/WWW.ZTSGC.COM/"));
 						outtextxy(230, 440, (i / 8 + 1) / 100 % 10 + '0');
 						outtextxy(240, 440, (i / 8 + 1) / 10 % 10 + '0');
 						outtextxy(250, 440, (i / 8 + 1) % 10 + '0');
-						common(400, 70 + (i % 8) * 45, 25, "ÏêÇé", 255, 255, 255);
-						common(400, 70 + ((i + 2) % 8) * 45, 25, "ÏêÇé", 255, 255, 255);
-						common(400, 70 + ((i + 4) % 8) * 45, 25, "ÏêÇé", 255, 255, 255);
-						common(400, 70 + ((i + 6) % 8) * 45, 25, "ÏêÇé", 255, 255, 255);
+						common(400, 70 + (i % 8) * 45, 25, "è¯¦æƒ…", 255, 255, 255);
+						common(400, 70 + ((i + 2) % 8) * 45, 25, "è¯¦æƒ…", 255, 255, 255);
+						common(400, 70 + ((i + 4) % 8) * 45, 25, "è¯¦æƒ…", 255, 255, 255);
+						common(400, 70 + ((i + 6) % 8) * 45, 25, "è¯¦æƒ…", 255, 255, 255);
 						i = 8 * (r - 1);
 						if ((rankflag&&i > 2089) || (!rankflag&&i > 4615) || i < 0) {
 							i = temp;
@@ -509,22 +508,22 @@ void WordList(void)
 							fillrectangle(160, 180, 480, 300);
 							setfillcolor(WHITE);
 							fillrectangle(160, 180, 480, 200);
-							settextstyle(30, 0, _T("ÕÅº£É½²ÝÄàÂíÌå"));
+							settextstyle(30, 0, _T("å¼ æµ·å±±è‰æ³¥é©¬ä½“"));
 							settextcolor(RGB(190, 190, 190));
-							outtextxy(180, 220, "³¬³ö·¶Î§");
-							common(300, 260, 25, "·µ»Ø", 120, 120, 120);
+							outtextxy(180, 220, "è¶…å‡ºèŒƒå›´");
+							common(300, 260, 25, "è¿”å›ž", 120, 120, 120);
 							MOUSEMSG g;
 							while (1)
 							{
 								g = GetMouseMsg();
 								if (g.x >= 280 && g.x <= 350 && g.y >= 260 && g.y <= 285) {
-									contact(300, 260, 25, "·µ»Ø", 60, 60, 60, 220, 220, 220);
+									contact(300, 260, 25, "è¿”å›ž", 60, 60, 60, 220, 220, 220);
 									if (g.uMsg == WM_LBUTTONUP)
 									{
 										BeginBatchDraw();
 										cleardevice();
 										Winterface(i, L);
-										settextstyle(20, 0, "×¨Òµ×ÖÌåÉè¼Æ·þÎñ/WWW.ZTSGC.COM/");
+										settextstyle(20, 0, "ä¸“ä¸šå­—ä½“è®¾è®¡æœåŠ¡/WWW.ZTSGC.COM/");
 										outtextxy(90, 20, c);
 										EndBatchDraw();
 										break;
@@ -532,14 +531,14 @@ void WordList(void)
 								}
 								else
 								{
-									depart(300, 260, 25, "·µ»Ø", 120, 120, 120, 220, 220, 220);
+									depart(300, 260, 25, "è¿”å›ž", 120, 120, 120, 220, 220, 220);
 								}
 							}
 						}
 						BeginBatchDraw();
 						cleardevice();
 						Winterface(i, L);
-						settextstyle(20, 0, "×¨Òµ×ÖÌåÉè¼Æ·þÎñ/WWW.ZTSGC.COM/");
+						settextstyle(20, 0, "ä¸“ä¸šå­—ä½“è®¾è®¡æœåŠ¡/WWW.ZTSGC.COM/");
 						outtextxy(90, 20, c);
 						EndBatchDraw();
 					}
@@ -547,36 +546,36 @@ void WordList(void)
 			}
 			else if (g.x >= 30 && g.x <= 150 && g.y >= 440 && g.y <= 465)
 			{
-				contact(50, 440, 25, "ÉÏÒ»Ò³", 60, 60, 60, 255, 255, 255);
+				contact(50, 440, 25, "ä¸Šä¸€é¡µ", 60, 60, 60, 255, 255, 255);
 				if (g.uMsg == WM_LBUTTONUP)
 				{
 					searchflag = 0;
 					i -= 8;
 					if (i < 0) {
 						i += 8;
-						depart(50, 440, 25, "ÉÏÒ»Ò³", 190, 190, 190, 255, 255, 255);
-						depart(370, 440, 25, "ÏÂÒ»Ò³", 190, 190, 190, 255, 255, 255);
+						depart(50, 440, 25, "ä¸Šä¸€é¡µ", 190, 190, 190, 255, 255, 255);
+						depart(370, 440, 25, "ä¸‹ä¸€é¡µ", 190, 190, 190, 255, 255, 255);
 						setfillcolor(RGB(220, 220, 220));
 						setlinecolor(RGB(174, 238, 238));
 						fillrectangle(160, 180, 480, 300);
 						setfillcolor(WHITE);
 						fillrectangle(160, 180, 480, 200);
-						settextstyle(30, 0, _T("ÕÅº£É½²ÝÄàÂíÌå"));
+						settextstyle(30, 0, _T("å¼ æµ·å±±è‰æ³¥é©¬ä½“"));
 						settextcolor(RGB(190, 190, 190));
-						outtextxy(180, 220, "ÒÑÔÚÊ×Ò³£¬ÎÞ·¨ÏòÇ°·­Ò³!");
-						common(300, 260, 25, "·µ»Ø", 120, 120, 120);
+						outtextxy(180, 220, "å·²åœ¨é¦–é¡µï¼Œæ— æ³•å‘å‰ç¿»é¡µ!");
+						common(300, 260, 25, "è¿”å›ž", 120, 120, 120);
 						MOUSEMSG g;
 						while (1)
 						{
 							g = GetMouseMsg();
 							if (g.x >= 280 && g.x <= 350 && g.y >= 260 && g.y <= 285) {
-								contact(300, 260, 25, "·µ»Ø", 60, 60, 60, 220, 220, 220);
+								contact(300, 260, 25, "è¿”å›ž", 60, 60, 60, 220, 220, 220);
 								if (g.uMsg == WM_LBUTTONUP)
 								{
 									BeginBatchDraw();
 									cleardevice();
 									Winterface(i, L);
-									settextstyle(20, 0, "×¨Òµ×ÖÌåÉè¼Æ·þÎñ/WWW.ZTSGC.COM/");
+									settextstyle(20, 0, "ä¸“ä¸šå­—ä½“è®¾è®¡æœåŠ¡/WWW.ZTSGC.COM/");
 									outtextxy(90, 20, c);
 									EndBatchDraw();
 									break;
@@ -584,31 +583,31 @@ void WordList(void)
 							}
 							else
 							{
-								depart(300, 260, 25, "·µ»Ø", 120, 120, 120, 220, 220, 220);
+								depart(300, 260, 25, "è¿”å›ž", 120, 120, 120, 220, 220, 220);
 							}
 						}
 					}
 					else {
 						BeginBatchDraw();
 						i += 8;
-						settextstyle(30, 0, _T("×¨Òµ×ÖÌåÉè¼Æ·þÎñ/WWW.ZTSGC.COM/"));
+						settextstyle(30, 0, _T("ä¸“ä¸šå­—ä½“è®¾è®¡æœåŠ¡/WWW.ZTSGC.COM/"));
 						settextcolor(WHITE);
 						outtextxy(40, 65 + (i % 8) * 45, PlaceForWord(i + 1, L)->english);
 						outtextxy(40, 65 + ((i + 2) % 8) * 45, PlaceForWord(i + 3, L)->english);
 						outtextxy(40, 65 + ((i + 4) % 8) * 45, PlaceForWord(i + 5, L)->english);
 						outtextxy(40, 65 + ((i + 6) % 8) * 45, PlaceForWord(i + 7, L)->english);
-						common(400, 70 + (i % 8) * 45, 25, "ÏêÇé", 255, 255, 255);
-						common(400, 70 + ((i + 2) % 8) * 45, 25, "ÏêÇé", 255, 255, 255);
-						common(400, 70 + ((i + 4) % 8) * 45, 25, "ÏêÇé", 255, 255, 255);
-						common(400, 70 + ((i + 6) % 8) * 45, 25, "ÏêÇé", 255, 255, 255);
-						settextstyle(25, 0, _T("×¨Òµ×ÖÌåÉè¼Æ·þÎñ/WWW.ZTSGC.COM/"));
+						common(400, 70 + (i % 8) * 45, 25, "è¯¦æƒ…", 255, 255, 255);
+						common(400, 70 + ((i + 2) % 8) * 45, 25, "è¯¦æƒ…", 255, 255, 255);
+						common(400, 70 + ((i + 4) % 8) * 45, 25, "è¯¦æƒ…", 255, 255, 255);
+						common(400, 70 + ((i + 6) % 8) * 45, 25, "è¯¦æƒ…", 255, 255, 255);
+						settextstyle(25, 0, _T("ä¸“ä¸šå­—ä½“è®¾è®¡æœåŠ¡/WWW.ZTSGC.COM/"));
 						outtextxy(230, 440, (i / 8 + 1) / 100 % 10 + '0');
 						outtextxy(240, 440, (i / 8 + 1) / 10 % 10 + '0');
 						outtextxy(250, 440, (i / 8 + 1) % 10 + '0');
 						i -= 8;
 						cleardevice();
 						Winterface(i, L);
-						settextstyle(20, 0, "×¨Òµ×ÖÌåÉè¼Æ·þÎñ/WWW.ZTSGC.COM/");
+						settextstyle(20, 0, "ä¸“ä¸šå­—ä½“è®¾è®¡æœåŠ¡/WWW.ZTSGC.COM/");
 						outtextxy(90, 20, c);
 						EndBatchDraw();
 					}
@@ -616,7 +615,7 @@ void WordList(void)
 			}
 			else if (g.x >= 350 && g.x <= 460 && g.y >= 440 && g.y <= 465)
 			{
-				contact(370, 440, 25, "ÏÂÒ»Ò³", 60, 60, 60, 255, 255, 255);
+				contact(370, 440, 25, "ä¸‹ä¸€é¡µ", 60, 60, 60, 255, 255, 255);
 				if (g.uMsg == WM_LBUTTONUP)
 				{
 					searchflag = 0;
@@ -628,29 +627,29 @@ void WordList(void)
 						u = 2089;
 					if (i > u) {
 						i -= 8;
-						depart(50, 440, 25, "ÉÏÒ»Ò³", 190, 190, 190, 255, 255, 255);
-						depart(370, 440, 25, "ÏÂÒ»Ò³", 190, 190, 190, 255, 255, 255);
+						depart(50, 440, 25, "ä¸Šä¸€é¡µ", 190, 190, 190, 255, 255, 255);
+						depart(370, 440, 25, "ä¸‹ä¸€é¡µ", 190, 190, 190, 255, 255, 255);
 						setfillcolor(RGB(220, 220, 220));
 						setlinecolor(RGB(174, 238, 238));
 						fillrectangle(160, 180, 480, 300);
 						setfillcolor(WHITE);
 						fillrectangle(160, 180, 480, 200);
-						settextstyle(30, 0, _T("ÕÅº£É½²ÝÄàÂíÌå"));
+						settextstyle(30, 0, _T("å¼ æµ·å±±è‰æ³¥é©¬ä½“"));
 						settextcolor(RGB(190, 190, 190));
-						outtextxy(180, 220, "ÒÑÔÚÎ²Ò³£¬ÎÞ·¨Ïòºó·­Ò³!");
-						common(300, 260, 25, "·µ»Ø", 120, 120, 120);
+						outtextxy(180, 220, "å·²åœ¨å°¾é¡µï¼Œæ— æ³•å‘åŽç¿»é¡µ!");
+						common(300, 260, 25, "è¿”å›ž", 120, 120, 120);
 						MOUSEMSG g;
 						while (1)
 						{
 							g = GetMouseMsg();
 							if (g.x >= 280 && g.x <= 350 && g.y >= 260 && g.y <= 285) {
-								contact(300, 260, 25, "·µ»Ø", 60, 60, 60, 220, 220, 220);
+								contact(300, 260, 25, "è¿”å›ž", 60, 60, 60, 220, 220, 220);
 								if (g.uMsg == WM_LBUTTONUP)
 								{
 									BeginBatchDraw();
 									cleardevice();
 									Winterface(i, L);
-									settextstyle(20, 0, "×¨Òµ×ÖÌåÉè¼Æ·þÎñ/WWW.ZTSGC.COM/");
+									settextstyle(20, 0, "ä¸“ä¸šå­—ä½“è®¾è®¡æœåŠ¡/WWW.ZTSGC.COM/");
 									outtextxy(90, 20, c);
 									EndBatchDraw();
 									break;
@@ -658,31 +657,31 @@ void WordList(void)
 							}
 							else
 							{
-								depart(300, 260, 25, "·µ»Ø", 120, 120, 120, 220, 220, 220);
+								depart(300, 260, 25, "è¿”å›ž", 120, 120, 120, 220, 220, 220);
 							}
 						}
 					}
 					else {
 						BeginBatchDraw();
 						i -= 8;
-						settextstyle(30, 0, _T("×¨Òµ×ÖÌåÉè¼Æ·þÎñ/WWW.ZTSGC.COM/"));
+						settextstyle(30, 0, _T("ä¸“ä¸šå­—ä½“è®¾è®¡æœåŠ¡/WWW.ZTSGC.COM/"));
 						settextcolor(WHITE);
 						outtextxy(40, 65 + (i % 8) * 45, PlaceForWord(i + 1, L)->english);
 						outtextxy(40, 65 + ((i + 2) % 8) * 45, PlaceForWord(i + 3, L)->english);
 						outtextxy(40, 65 + ((i + 4) % 8) * 45, PlaceForWord(i + 5, L)->english);
 						outtextxy(40, 65 + ((i + 6) % 8) * 45, PlaceForWord(i + 7, L)->english);
-						common(400, 70 + (i % 8) * 45, 25, "ÏêÇé", 255, 255, 255);
-						common(400, 70 + ((i + 2) % 8) * 45, 25, "ÏêÇé", 255, 255, 255);
-						common(400, 70 + ((i + 4) % 8) * 45, 25, "ÏêÇé", 255, 255, 255);
-						common(400, 70 + ((i + 6) % 8) * 45, 25, "ÏêÇé", 255, 255, 255);
-						settextstyle(25, 0, _T("×¨Òµ×ÖÌåÉè¼Æ·þÎñ/WWW.ZTSGC.COM/"));
+						common(400, 70 + (i % 8) * 45, 25, "è¯¦æƒ…", 255, 255, 255);
+						common(400, 70 + ((i + 2) % 8) * 45, 25, "è¯¦æƒ…", 255, 255, 255);
+						common(400, 70 + ((i + 4) % 8) * 45, 25, "è¯¦æƒ…", 255, 255, 255);
+						common(400, 70 + ((i + 6) % 8) * 45, 25, "è¯¦æƒ…", 255, 255, 255);
+						settextstyle(25, 0, _T("ä¸“ä¸šå­—ä½“è®¾è®¡æœåŠ¡/WWW.ZTSGC.COM/"));
 						outtextxy(230, 440, (i / 8 + 1) / 100 % 10 + '0');
 						outtextxy(240, 440, (i / 8 + 1) / 10 % 10 + '0');
 						outtextxy(250, 440, (i / 8 + 1) % 10 + '0');
 						i += 8;
 						cleardevice();
 						Winterface(i, L);
-						settextstyle(20, 0, "×¨Òµ×ÖÌåÉè¼Æ·þÎñ/WWW.ZTSGC.COM/");
+						settextstyle(20, 0, "ä¸“ä¸šå­—ä½“è®¾è®¡æœåŠ¡/WWW.ZTSGC.COM/");
 						outtextxy(90, 20, c);
 						EndBatchDraw();
 					}
@@ -699,7 +698,7 @@ void WordList(void)
 				while (m != 1) {
 					setfillcolor(RGB(122, 197, 205));
 					solidrectangle(350, 10, 420, 50);
-					settextstyle(20, 0, _T("×¨Òµ×ÖÌåÉè¼Æ·þÎñ/WWW.ZTSGC.COM/"));
+					settextstyle(20, 0, _T("ä¸“ä¸šå­—ä½“è®¾è®¡æœåŠ¡/WWW.ZTSGC.COM/"));
 					settextcolor(RGB(60, 60, 60));
 					flag = 1;
 					m++;
@@ -714,7 +713,7 @@ void WordList(void)
 					BeginBatchDraw();
 					cleardevice();
 					Winterface(i, L);
-					settextstyle(20, 0, "×¨Òµ×ÖÌåÉè¼Æ·þÎñ/WWW.ZTSGC.COM/");
+					settextstyle(20, 0, "ä¸“ä¸šå­—ä½“è®¾è®¡æœåŠ¡/WWW.ZTSGC.COM/");
 					outtextxy(90, 20, c);
 					EndBatchDraw();
 				}
@@ -731,13 +730,13 @@ void WordList(void)
 					{
 						free(L);
 						L = (NWord)malloc(sizeof(struct sqlist));
-						CreateWordList("ËÄ¼¶.txt", "µ¥´Ê×´Ì¬4.txt", L);
+						CreateWordList("å››çº§.txt", "å•è¯çŠ¶æ€4.txt", L);
 						i = 0;
 						c[s] = '\0';
 						BeginBatchDraw();
 						cleardevice();
 						Winterface(i, L);
-						settextstyle(20, 0, "×¨Òµ×ÖÌåÉè¼Æ·þÎñ/WWW.ZTSGC.COM/");
+						settextstyle(20, 0, "ä¸“ä¸šå­—ä½“è®¾è®¡æœåŠ¡/WWW.ZTSGC.COM/");
 						outtextxy(90, 20, c);
 						EndBatchDraw();
 						rankflag = 0;
@@ -756,13 +755,13 @@ void WordList(void)
 					{
 						free(L);
 						L = (NWord)malloc(sizeof(struct sqlist));
-						CreateWordList("Áù¼¶.txt", "µ¥´Ê×´Ì¬6.txt", L);
+						CreateWordList("å…­çº§.txt", "å•è¯çŠ¶æ€6.txt", L);
 						i = 0;
 						c[s] = '\0';
 						BeginBatchDraw();
 						cleardevice();
 						Winterface(i, L);
-						settextstyle(20, 0, "×¨Òµ×ÖÌåÉè¼Æ·þÎñ/WWW.ZTSGC.COM/");
+						settextstyle(20, 0, "ä¸“ä¸šå­—ä½“è®¾è®¡æœåŠ¡/WWW.ZTSGC.COM/");
 						outtextxy(90, 20, c);
 						EndBatchDraw();
 						rankflag = 1;
@@ -772,120 +771,120 @@ void WordList(void)
 			else if (g.x >= 380 && g.x <= 480 && g.y >= 70 + (i % 8) * 45 && g.y <= 95 + (i % 8) * 45)
 			{
 				if (!a[0]) {
-					contact(400, 70 + (i % 8) * 45, 25, "ÏêÇé", 60, 60, 60, 255, 255, 255);
+					contact(400, 70 + (i % 8) * 45, 25, "è¯¦æƒ…", 60, 60, 60, 255, 255, 255);
 					if (g.uMsg == WM_LBUTTONUP)
 					{
 						s = 0;
 						width = 0;
 						if (!rankflag)
-							detail(i + 1, L, "µ¥´Ê×´Ì¬4.txt");
+							detail(i + 1, L, "å•è¯çŠ¶æ€4.txt");
 						else
-							detail(i + 1, L, "µ¥´Ê×´Ì¬6.txt");
+							detail(i + 1, L, "å•è¯çŠ¶æ€6.txt");
 					}
 				}
 			}
 			else if (g.x >= 380 && g.x <= 480 && g.y >= 70 + ((i + 1) % 8) * 45 && g.y <= 95 + ((i + 1) % 8) * 45)
 			{
 				if (!a[1]) {
-					contact(400, 70 + ((i + 1) % 8) * 45, 25, "ÏêÇé", 60, 60, 60, 187, 255, 255);
+					contact(400, 70 + ((i + 1) % 8) * 45, 25, "è¯¦æƒ…", 60, 60, 60, 187, 255, 255);
 					if (g.uMsg == WM_LBUTTONUP)
 					{
 						s = 0;
 						width = 0;
 						if (!rankflag)
-							detail(i + 2, L, "µ¥´Ê×´Ì¬4.txt");
+							detail(i + 2, L, "å•è¯çŠ¶æ€4.txt");
 						else
-							detail(i + 2, L, "µ¥´Ê×´Ì¬6.txt");
+							detail(i + 2, L, "å•è¯çŠ¶æ€6.txt");
 					}
 				}
 			}
 			else if (g.x >= 380 && g.x <= 480 && g.y >= 70 + ((i + 2) % 8) * 45 && g.y <= 95 + ((i + 2) % 8) * 45)
 			{
 				if (!a[2]) {
-					contact(400, 70 + ((i + 2) % 8) * 45, 25, "ÏêÇé", 60, 60, 60, 255, 255, 255);
+					contact(400, 70 + ((i + 2) % 8) * 45, 25, "è¯¦æƒ…", 60, 60, 60, 255, 255, 255);
 					if (g.uMsg == WM_LBUTTONUP)
 					{
 						s = 0;
 						width = 0;
 						if (!rankflag)
-							detail(i + 3, L, "µ¥´Ê×´Ì¬4.txt");
+							detail(i + 3, L, "å•è¯çŠ¶æ€4.txt");
 						else
-							detail(i + 3, L, "µ¥´Ê×´Ì¬6.txt");
+							detail(i + 3, L, "å•è¯çŠ¶æ€6.txt");
 					}
 				}
 			}
 			else if (g.x >= 380 && g.x <= 480 && g.y >= 70 + ((i + 3) % 8) * 45 && g.y <= 95 + ((i + 3) % 8) * 45)
 			{
 				if (!a[3]) {
-					contact(400, 70 + ((i + 3) % 8) * 45, 25, "ÏêÇé", 60, 60, 60, 187, 255, 255);
+					contact(400, 70 + ((i + 3) % 8) * 45, 25, "è¯¦æƒ…", 60, 60, 60, 187, 255, 255);
 					if (g.uMsg == WM_LBUTTONUP)
 					{
 						s = 0;
 						width = 0;
 						if (!rankflag)
-							detail(i + 4, L, "µ¥´Ê×´Ì¬4.txt");
+							detail(i + 4, L, "å•è¯çŠ¶æ€4.txt");
 						else
-							detail(i + 4, L, "µ¥´Ê×´Ì¬6.txt");
+							detail(i + 4, L, "å•è¯çŠ¶æ€6.txt");
 					}
 				}
 			}
 			else if (g.x >= 380 && g.x <= 480 && g.y >= 70 + ((i + 4) % 8) * 45 && g.y <= 95 + ((i + 4) % 8) * 45)
 			{
 				if (!a[4]) {
-					contact(400, 70 + ((i + 4) % 8) * 45, 25, "ÏêÇé", 60, 60, 60, 255, 255, 255);
+					contact(400, 70 + ((i + 4) % 8) * 45, 25, "è¯¦æƒ…", 60, 60, 60, 255, 255, 255);
 					if (g.uMsg == WM_LBUTTONUP)
 					{
 						s = 0;
 						width = 0;
 						if (!rankflag)
-							detail(i + 5, L, "µ¥´Ê×´Ì¬4.txt");
+							detail(i + 5, L, "å•è¯çŠ¶æ€4.txt");
 						else
-							detail(i + 5, L, "µ¥´Ê×´Ì¬6.txt");
+							detail(i + 5, L, "å•è¯çŠ¶æ€6.txt");
 					}
 				}
 			}
 			else if (g.x >= 380 && g.x <= 480 && g.y >= 70 + ((i + 5) % 8) * 45 && g.y <= 95 + ((i + 5) % 8) * 45)
 			{
 				if (!a[5]) {
-					contact(400, 70 + ((i + 5) % 8) * 45, 25, "ÏêÇé", 60, 60, 60, 187, 255, 255);
+					contact(400, 70 + ((i + 5) % 8) * 45, 25, "è¯¦æƒ…", 60, 60, 60, 187, 255, 255);
 					if (g.uMsg == WM_LBUTTONUP)
 					{
 						s = 0;
 						width = 0;
 						if (!rankflag)
-							detail(i + 6, L, "µ¥´Ê×´Ì¬4.txt");
+							detail(i + 6, L, "å•è¯çŠ¶æ€4.txt");
 						else
-							detail(i + 6, L, "µ¥´Ê×´Ì¬6.txt");
+							detail(i + 6, L, "å•è¯çŠ¶æ€6.txt");
 					}
 				}
 			}
 			else if (g.x >= 380 && g.x <= 480 && g.y >= 70 + ((i + 6) % 8) * 45 && g.y <= 95 + ((i + 6) % 8) * 45)
 			{
 				if (!a[6]) {
-					contact(400, 70 + ((i + 6) % 8) * 45, 25, "ÏêÇé", 60, 60, 60, 255, 255, 255);
+					contact(400, 70 + ((i + 6) % 8) * 45, 25, "è¯¦æƒ…", 60, 60, 60, 255, 255, 255);
 					if (g.uMsg == WM_LBUTTONUP)
 					{
 						s = 0;
 						width = 0;
 						if (!rankflag)
-							detail(i + 7, L, "µ¥´Ê×´Ì¬4.txt");
+							detail(i + 7, L, "å•è¯çŠ¶æ€4.txt");
 						else
-							detail(i + 7, L, "µ¥´Ê×´Ì¬6.txt");
+							detail(i + 7, L, "å•è¯çŠ¶æ€6.txt");
 					}
 				}
 			}
 			else if (g.x >= 380 && g.x <= 480 && g.y >= 70 + ((i + 7) % 8) * 45 && g.y <= 95 + ((i + 7) % 8) * 45)
 			{
 				if (!a[7]) {
-					contact(400, 70 + ((i + 7) % 8) * 45, 25, "ÏêÇé", 60, 60, 60, 187, 255, 255);
+					contact(400, 70 + ((i + 7) % 8) * 45, 25, "è¯¦æƒ…", 60, 60, 60, 187, 255, 255);
 					if (g.uMsg == WM_LBUTTONUP)
 					{
 						s = 0;
 						width = 0;
 						if (!rankflag)
-							detail(i + 8, L, "µ¥´Ê×´Ì¬4.txt");
+							detail(i + 8, L, "å•è¯çŠ¶æ€4.txt");
 						else
-							detail(i + 8, L, "µ¥´Ê×´Ì¬6.txt");
+							detail(i + 8, L, "å•è¯çŠ¶æ€6.txt");
 					}
 				}
 			}
@@ -893,7 +892,7 @@ void WordList(void)
 				if (flag) {
 					setfillcolor(RGB(142, 229, 238));
 					solidrectangle(350, 10, 420, 50);
-					settextstyle(20, 0, _T("×¨Òµ×ÖÌåÉè¼Æ·þÎñ/WWW.ZTSGC.COM/"));
+					settextstyle(20, 0, _T("ä¸“ä¸šå­—ä½“è®¾è®¡æœåŠ¡/WWW.ZTSGC.COM/"));
 					settextcolor(RGB(120, 120, 120));
 					outtextxy(360, 20, "search");
 					flag = 0;
@@ -902,101 +901,101 @@ void WordList(void)
 				if (!rankflag) {
 					if (i + 1 <= 4615)
 					{
-						depart(400, 70 + (i % 8) * 45, 25, "ÏêÇé", 120, 120, 120, 255, 255, 255);
+						depart(400, 70 + (i % 8) * 45, 25, "è¯¦æƒ…", 120, 120, 120, 255, 255, 255);
 						a[0] = 0;
 					}
 					else a[0] = 1;
 					if (i + 2 <= 4615)
 					{
-						depart(400, 70 + ((i + 1) % 8) * 45, 25, "ÏêÇé", 120, 120, 120, 187, 255, 255);
+						depart(400, 70 + ((i + 1) % 8) * 45, 25, "è¯¦æƒ…", 120, 120, 120, 187, 255, 255);
 						a[1] = 0;
 					}
 					else a[1] = 1;
 					if (i + 3 <= 4615)
 					{
-						depart(400, 70 + ((i + 2) % 8) * 45, 25, "ÏêÇé", 120, 120, 120, 255, 255, 255);
+						depart(400, 70 + ((i + 2) % 8) * 45, 25, "è¯¦æƒ…", 120, 120, 120, 255, 255, 255);
 						a[2] = 0;
 					}
 					else a[2] = 1;
 					if (i + 4 <= 4615)
 					{
-						depart(400, 70 + ((i + 3) % 8) * 45, 25, "ÏêÇé", 120, 120, 120, 187, 255, 255);
+						depart(400, 70 + ((i + 3) % 8) * 45, 25, "è¯¦æƒ…", 120, 120, 120, 187, 255, 255);
 						a[3] = 0;
 					}
 					else a[3] = 1;
 					if (i + 5 <= 4615)
 					{
-						depart(400, 70 + ((i + 4) % 8) * 45, 25, "ÏêÇé", 120, 120, 120, 255, 255, 255);
+						depart(400, 70 + ((i + 4) % 8) * 45, 25, "è¯¦æƒ…", 120, 120, 120, 255, 255, 255);
 						a[4] = 0;
 					}
 					else a[4] = 1;
 					if (i + 6 <= 4615) {
-						depart(400, 70 + ((i + 5) % 8) * 45, 25, "ÏêÇé", 120, 120, 120, 187, 255, 255); 
+						depart(400, 70 + ((i + 5) % 8) * 45, 25, "è¯¦æƒ…", 120, 120, 120, 187, 255, 255); 
 						a[5] = 0;
 					}
 					else a[5] = 1;
 					if (i + 7 <= 4615) {
-						depart(400, 70 + ((i + 6) % 8) * 45, 25, "ÏêÇé", 120, 120, 120, 255, 255, 255);
+						depart(400, 70 + ((i + 6) % 8) * 45, 25, "è¯¦æƒ…", 120, 120, 120, 255, 255, 255);
 						a[6] = 0;
 					}
 					else a[6] = 1;
 					if (i + 8 <= 4615) {
-						depart(400, 70 + ((i + 7) % 8) * 45, 25, "ÏêÇé", 120, 120, 120, 187, 255, 255); 
+						depart(400, 70 + ((i + 7) % 8) * 45, 25, "è¯¦æƒ…", 120, 120, 120, 187, 255, 255); 
 						a[7] = 0;
 					}
 					else a[7] = 1;
 				}
 				else {
 					if (i + 1 <= 2089) {
-						depart(400, 70 + (i % 8) * 45, 25, "ÏêÇé", 120, 120, 120, 255, 255, 255); 
+						depart(400, 70 + (i % 8) * 45, 25, "è¯¦æƒ…", 120, 120, 120, 255, 255, 255); 
 						a[0] = 0;
 					}
 					else a[0] = 1;
 					if (i + 2 <= 2089) {
-						depart(400, 70 + ((i + 1) % 8) * 45, 25, "ÏêÇé", 120, 120, 120, 187, 255, 255); 
+						depart(400, 70 + ((i + 1) % 8) * 45, 25, "è¯¦æƒ…", 120, 120, 120, 187, 255, 255); 
 						a[1] = 0;
 					}
 					else a[1] = 1;
 					if (i + 3 <= 2089) {
-						depart(400, 70 + ((i + 2) % 8) * 45, 25, "ÏêÇé", 120, 120, 120, 255, 255, 255); 
+						depart(400, 70 + ((i + 2) % 8) * 45, 25, "è¯¦æƒ…", 120, 120, 120, 255, 255, 255); 
 						a[2] = 0; 
 					}
 					else a[2] = 1;
 					if (i + 4 <= 2089) {
-						depart(400, 70 + ((i + 3) % 8) * 45, 25, "ÏêÇé", 120, 120, 120, 187, 255, 255);
+						depart(400, 70 + ((i + 3) % 8) * 45, 25, "è¯¦æƒ…", 120, 120, 120, 187, 255, 255);
 						a[3] = 0;
 					}
 					else a[3] = 1;
 					if (i + 5 <= 2089) {
-						depart(400, 70 + ((i + 4) % 8) * 45, 25, "ÏêÇé", 120, 120, 120, 255, 255, 255); 
+						depart(400, 70 + ((i + 4) % 8) * 45, 25, "è¯¦æƒ…", 120, 120, 120, 255, 255, 255); 
 						a[4] = 0;
 					}
 					else a[4] = 1;
 					if (i + 6 <= 2089) {
-						depart(400, 70 + ((i + 5) % 8) * 45, 25, "ÏêÇé", 120, 120, 120, 187, 255, 255); 
+						depart(400, 70 + ((i + 5) % 8) * 45, 25, "è¯¦æƒ…", 120, 120, 120, 187, 255, 255); 
 						a[5] = 0;
 					}
 					else a[5] = 1;
 					if (i + 7 <= 2089) {
-						depart(400, 70 + ((i + 6) % 8) * 45, 25, "ÏêÇé", 120, 120, 120, 255, 255, 255); 
+						depart(400, 70 + ((i + 6) % 8) * 45, 25, "è¯¦æƒ…", 120, 120, 120, 255, 255, 255); 
 						a[6] = 0;
 					}
 					else a[6] = 1;
 					if (i + 8 <= 2089) {
-						depart(400, 70 + ((i + 7) % 8) * 45, 25, "ÏêÇé", 120, 120, 120, 187, 255, 255); 
+						depart(400, 70 + ((i + 7) % 8) * 45, 25, "è¯¦æƒ…", 120, 120, 120, 187, 255, 255); 
 						a[7] = 0;
 					}
 					else a[7] = 1;
 				}
 				depart(542, 50, 20, "CET.4", 120, 120, 120, 150, 205, 205);
 				depart(542, 100, 20, "CET.6", 120, 120, 120, 150, 205, 205);
-				depart(548, 420, 25, "·µ»Ø", 120, 120, 120, 150, 205, 205);
-				depart(548, 300, 25, "Ìø×ª", 120, 120, 120, 150, 205, 205);
-				depart(50, 440, 25, "ÉÏÒ»Ò³", 190, 190, 190, 255, 255, 255);
-				depart(370, 440, 25, "ÏÂÒ»Ò³", 190, 190, 190, 255, 255, 255);
-				settextstyle(25, 0, _T("×¨Òµ×ÖÌåÉè¼Æ·þÎñ/WWW.ZTSGC.COM/"));
+				depart(548, 420, 25, "è¿”å›ž", 120, 120, 120, 150, 205, 205);
+				depart(548, 300, 25, "è·³è½¬", 120, 120, 120, 150, 205, 205);
+				depart(50, 440, 25, "ä¸Šä¸€é¡µ", 190, 190, 190, 255, 255, 255);
+				depart(370, 440, 25, "ä¸‹ä¸€é¡µ", 190, 190, 190, 255, 255, 255);
+				settextstyle(25, 0, _T("ä¸“ä¸šå­—ä½“è®¾è®¡æœåŠ¡/WWW.ZTSGC.COM/"));
 				settextcolor(RGB(60, 60, 60));
-				outtextxy(195, 440, "µÚ         Ò³");
+				outtextxy(195, 440, "ç¬¬         é¡µ");
 				outtextxy(230, 440, (i / 8 + 1) / 100 % 10 + '0');
 				outtextxy(240, 440, (i / 8 + 1) / 10 % 10 + '0');
 				while (1) {
@@ -1010,7 +1009,7 @@ void WordList(void)
 				if (g.uMsg == WM_LBUTTONUP)
 				{
 					searchflag = 0;
-					settextstyle(20, 0, "×¨Òµ×ÖÌåÉè¼Æ·þÎñ/WWW.ZTSGC.COM/");
+					settextstyle(20, 0, "ä¸“ä¸šå­—ä½“è®¾è®¡æœåŠ¡/WWW.ZTSGC.COM/");
 					settextcolor(WHITE);
 					outtextxy(90 + width, 20, '_');
 				}
